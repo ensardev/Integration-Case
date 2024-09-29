@@ -1,0 +1,8 @@
+﻿For Distributed Server Integration operations, I added the "DistributedIntegrationService" service to the project. 
+I set up a scenario where data records will be stored on Redis. Here, I established the Redis connection in the constructor.
+
+In Program.cs, the service variable can be set between Single and Distributed Integration.
+
+In the locking method used for distributed systems, the lock mechanism might not be released 
+in cases where the application crashes or system errors occur. Here, the expiration time set 
+for the lock mechanism is awaited. This can be a problem for long-term scenarios.
